@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta name="author" content="Geilson Silva">
+    <title>Banco FAP|Softex</title>
+</head>
+<body>
+    <h1 class="title">Banco FAP|Softex</h1>
+    <div id="conta-info" class="container">
+        <p><strong>Agência:</strong> <span id="agencia">0001</span></p>
+        <p><strong>Conta:</strong> <span id="conta">1956172-1</span></p>
+        <p><strong>Tipo de Conta:</strong> <span id="tipo-conta">Corrente</span></p>
+        <p><strong>Saldo:</strong> R$ <span id="saldo">19.525.318,23</span></p>
+    </div>
+    <button onclick="window.location.href='numero_da_conta.html'" class="btn">Número da Conta</button>
+    <div id="retorno-inicial" style="display: none;">
+        <a href="index.html">
+            <img src="./img/homeRmBg.png" alt="Voltar para a página inicial" class="return-icon">
+        </a>
+    </div>
+    <div id="extrato" class "container" style="display: none;">
+        <h2 class="sub-title">Extrato de Movimentações</h2>
+        <ul id="movimentacoes" class="mov-list">
+            <!-- As movimentações serão adicionadas dinamicamente aqui -->
+        </ul>
+    </div>
+    <button onclick="exibirSaldo()" class="btn">Buscar Saldo</button>
+    <button onclick="banco.deposito(100); atualizarSaldo();" class="btn">Depósito R$100</button>
+    <button onclick="banco.saque(50); atualizarSaldo();" class="btn">Saque R$50</button>
+</body>
+</html>
